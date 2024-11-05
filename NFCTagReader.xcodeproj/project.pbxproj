@@ -18,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		1426D16B1ED030FC0082EAE0 /* NFCTagReader.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = NFCTagReader.entitlements; path = ../NFCTagReader.entitlements; sourceTree = "<group>"; };
+		ADBA51452F34CEA34FA04D0F /* SampleCode.xcconfig */ = {isa = PBXFileReference; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
 		B41052201EC2BA04006D9146 /* NFCTagReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NFCTagReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B41052231EC2BA04006D9146 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B41052281EC2BA04006D9146 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -28,8 +29,7 @@
 		B47143DC1ECF6EC10026C5B4 /* MessagesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesTableViewController.swift; sourceTree = "<group>"; };
 		B47143DD1ECF6EC10026C5B4 /* MessagesTableViewController+DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MessagesTableViewController+DataSource.swift"; sourceTree = "<group>"; };
 		B47143DE1ECF6EC10026C5B4 /* PayloadsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayloadsTableViewController.swift; sourceTree = "<group>"; };
-		D5C3DC30D5C429F000000001 /* SampleCode.xcconfig */ = {isa = PBXFileReference; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
-		D8089BF0D8089AD000000001 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE.txt; sourceTree = "<group>"; };
+		D881D82E97E9F473CBB9BECD /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,8 +49,8 @@
 				B41052351EC2BA73006D9146 /* README.md */,
 				B41052221EC2BA04006D9146 /* NFCTagReader */,
 				B41052211EC2BA04006D9146 /* Products */,
-				D5C516C0D5C5168000000001 /* Configuration */,
-				D8087810D8099F5000000001 /* LICENSE */,
+				F2EB0A8BD238CAE281C37B94 /* Configuration */,
+				C8208AAA9B8917D6D338792F /* LICENSE */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,21 +86,21 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		D5C516C0D5C5168000000001 /* Configuration */ = {
+		C8208AAA9B8917D6D338792F /* LICENSE */ = {
 			isa = PBXGroup;
 			children = (
-				D5C3DC30D5C429F000000001 /* SampleCode.xcconfig */,
-			);
-			name = Configuration;
-			sourceTree = "<group>";
-		};
-		D8087810D8099F5000000001 /* LICENSE */ = {
-			isa = PBXGroup;
-			children = (
-				D8089BF0D8089AD000000001 /* LICENSE.txt */,
+				D881D82E97E9F473CBB9BECD /* LICENSE.txt */,
 			);
 			name = LICENSE;
-			path = LICENSE;
+			path = "";
+			sourceTree = "<group>";
+		};
+		F2EB0A8BD238CAE281C37B94 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				ADBA51452F34CEA34FA04D0F /* SampleCode.xcconfig */,
+			);
+			name = Configuration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -113,7 +113,6 @@
 				B410521C1EC2BA04006D9146 /* Sources */,
 				B410521D1EC2BA04006D9146 /* Frameworks */,
 				B410521E1EC2BA04006D9146 /* Resources */,
-				17E29EE017E2A71000000001,
 			);
 			buildRules = (
 			);
@@ -218,7 +217,7 @@
 /* Begin XCBuildConfiguration section */
 		B41052301EC2BA04006D9146 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D5C3DC30D5C429F000000001 /* SampleCode.xcconfig */;
+			baseConfigurationReference = ADBA51452F34CEA34FA04D0F /* SampleCode.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -277,7 +276,7 @@
 		};
 		B41052311EC2BA04006D9146 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D5C3DC30D5C429F000000001 /* SampleCode.xcconfig */;
+			baseConfigurationReference = ADBA51452F34CEA34FA04D0F /* SampleCode.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -329,13 +328,14 @@
 		};
 		B41052331EC2BA04006D9146 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D5C3DC30D5C429F000000001 /* SampleCode.xcconfig */;
+			baseConfigurationReference = ADBA51452F34CEA34FA04D0F /* SampleCode.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = NFCTagReader/NFCTagReader.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				INFOPLIST_FILE = NFCTagReader/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -351,13 +351,14 @@
 		};
 		B41052341EC2BA04006D9146 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D5C3DC30D5C429F000000001 /* SampleCode.xcconfig */;
+			baseConfigurationReference = ADBA51452F34CEA34FA04D0F /* SampleCode.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = NFCTagReader/NFCTagReader.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				INFOPLIST_FILE = NFCTagReader/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
