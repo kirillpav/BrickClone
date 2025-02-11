@@ -88,6 +88,7 @@ class MessagesTableViewController: UITableViewController, NFCNDEFReaderSessionDe
                         statusMessage = "Found 1 NDEF message"
                         DispatchQueue.main.async {
                             // Process detected NFCNDEFMessage objects.
+                            print("NDEF Message: \(String(describing: message))")
                             self.detectedMessages.append(message!)
                             self.tableView.reloadData()
                         }
