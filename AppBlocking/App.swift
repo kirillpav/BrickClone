@@ -2,24 +2,18 @@
 //  App.swift
 //  NFCTagReader
 //
-//  Created by Kirill Pavlov on 2/8/25.
+//  Created by Kirill Pavlov on 2/10/25.
 //  Copyright © 2025 Apple. All rights reserved.
 //
 
-import FamilyControls
 import SwiftUI
+import FamilyControls
 
-
-struct ContentView: View {
-    @State var isPresented: Bool = false
-    @State var model = MyModel()
-    
-    var body: some View {
-        Button("Select Apps to Block"){
-            isPresented = true
+@main
+struct NFCTagReaderApp: App {
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
         }
-        .familyActivityPicker(isPresented: $isPresented, selection: $model.selectionToDiscourage)
     }
 }
-
-

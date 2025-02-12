@@ -38,8 +38,7 @@
 			membershipExceptions = (
 				App.swift,
 				AppBlocking.swift,
-				DeviceActivityMonitor.swift,
-				DeviceActivitySchedule.swift,
+				ContentView.swift,
 				MyModel.swift,
 			);
 			target = B410521F1EC2BA04006D9146 /* NFCTagReader */;

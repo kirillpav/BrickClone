@@ -9,14 +9,15 @@
 import Foundation
 import FamilyControls
 
-
-AuthorizationCenter.shared.requestAuthorization{ result in
-    switch(result) {
-    case .success:
-        print("Authorization granted")
-    case .failure(let error):
-        print("Authorization denied: \(error)")
+class AppBlocking {
+    static func requestAuthorization() {
+        AuthorizationCenter.shared.requestAuthorization{ result in
+            switch(result) {
+            case .success:
+                print("Authorization granted")
+            case .failure(let error):
+                print("Authorization denied: \(error)")
+            }
+        }
     }
 }
-
-
