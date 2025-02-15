@@ -11,9 +11,20 @@ import FamilyControls
 
 @main
 struct NFCTagReaderApp: App {
+    
+    let center = AuthorizationCenter.shared
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ShieldView()
+                .task {
+                    do {
+                        try await center.requestAuthorization(for: .individual)
+                    }
+                    catch {
+                        print("Authorization Error: \(error)")
+                    }
+                }
         }
     }
 }

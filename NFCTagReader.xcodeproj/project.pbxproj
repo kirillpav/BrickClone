@@ -14,7 +14,34 @@
 		B47143DF1ECF6EC10026C5B4 /* MessagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47143DC1ECF6EC10026C5B4 /* MessagesTableViewController.swift */; };
 		B47143E01ECF6EC10026C5B4 /* MessagesTableViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47143DD1ECF6EC10026C5B4 /* MessagesTableViewController+DataSource.swift */; };
 		B47143E11ECF6EC10026C5B4 /* PayloadsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47143DE1ECF6EC10026C5B4 /* PayloadsTableViewController.swift */; };
+		E8DEBBD92D61175E00F9FD7F /* ManagedSettings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8DEBBD82D61175E00F9FD7F /* ManagedSettings.framework */; };
+		E8DEBBDB2D61175E00F9FD7F /* ManagedSettingsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8DEBBDA2D61175E00F9FD7F /* ManagedSettingsUI.framework */; };
+		E8DEBBE32D61175E00F9FD7F /* Brick.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E8DEBBD62D61175E00F9FD7F /* Brick.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E8DEBBE12D61175E00F9FD7F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B41052181EC2BA04006D9146 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E8DEBBD52D61175E00F9FD7F;
+			remoteInfo = Brick;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E8DEBBE42D61175E00F9FD7F /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E8DEBBE32D61175E00F9FD7F /* Brick.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1426D16B1ED030FC0082EAE0 /* NFCTagReader.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = NFCTagReader.entitlements; path = ../NFCTagReader.entitlements; sourceTree = "<group>"; };
@@ -30,6 +57,9 @@
 		B47143DD1ECF6EC10026C5B4 /* MessagesTableViewController+DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MessagesTableViewController+DataSource.swift"; sourceTree = "<group>"; };
 		B47143DE1ECF6EC10026C5B4 /* PayloadsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayloadsTableViewController.swift; sourceTree = "<group>"; };
 		D881D82E97E9F473CBB9BECD /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		E8DEBBD62D61175E00F9FD7F /* Brick.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Brick.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8DEBBD82D61175E00F9FD7F /* ManagedSettings.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ManagedSettings.framework; path = System/Library/Frameworks/ManagedSettings.framework; sourceTree = SDKROOT; };
+		E8DEBBDA2D61175E00F9FD7F /* ManagedSettingsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ManagedSettingsUI.framework; path = System/Library/Frameworks/ManagedSettingsUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -39,14 +69,23 @@
 				App.swift,
 				AppBlocking.swift,
 				ContentView.swift,
-				MyModel.swift,
+				ShieldManager.swift,
+				ShieldView.swift,
 			);
 			target = B410521F1EC2BA04006D9146 /* NFCTagReader */;
+		};
+		E8DEBBE82D61175E00F9FD7F /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = E8DEBBD52D61175E00F9FD7F /* Brick */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		E884EF432D5833E30020B6C0 /* AppBlocking */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (E884EF472D5834080020B6C0 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = AppBlocking; sourceTree = "<group>"; };
+		E8DEBBDC2D61175E00F9FD7F /* Brick */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (E8DEBBE82D61175E00F9FD7F /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Brick; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +93,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8DEBBD32D61175E00F9FD7F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8DEBBD92D61175E00F9FD7F /* ManagedSettings.framework in Frameworks */,
+				E8DEBBDB2D61175E00F9FD7F /* ManagedSettingsUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +114,8 @@
 				E884EF432D5833E30020B6C0 /* AppBlocking */,
 				B41052351EC2BA73006D9146 /* README.md */,
 				B41052221EC2BA04006D9146 /* NFCTagReader */,
+				E8DEBBDC2D61175E00F9FD7F /* Brick */,
+				E8DEBBD72D61175E00F9FD7F /* Frameworks */,
 				B41052211EC2BA04006D9146 /* Products */,
 				F2EB0A8BD238CAE281C37B94 /* Configuration */,
 				C8208AAA9B8917D6D338792F /* LICENSE */,
@@ -76,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				B41052201EC2BA04006D9146 /* NFCTagReader.app */,
+				E8DEBBD62D61175E00F9FD7F /* Brick.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,6 +163,15 @@
 			name = LICENSE;
 			sourceTree = "<group>";
 		};
+		E8DEBBD72D61175E00F9FD7F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E8DEBBD82D61175E00F9FD7F /* ManagedSettings.framework */,
+				E8DEBBDA2D61175E00F9FD7F /* ManagedSettingsUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F2EB0A8BD238CAE281C37B94 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,15 +190,39 @@
 				B410521C1EC2BA04006D9146 /* Sources */,
 				B410521D1EC2BA04006D9146 /* Frameworks */,
 				B410521E1EC2BA04006D9146 /* Resources */,
+				E8DEBBE42D61175E00F9FD7F /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E8DEBBE22D61175E00F9FD7F /* PBXTargetDependency */,
 			);
 			name = NFCTagReader;
 			productName = NFCTagReader;
 			productReference = B41052201EC2BA04006D9146 /* NFCTagReader.app */;
 			productType = "com.apple.product-type.application";
+		};
+		E8DEBBD52D61175E00F9FD7F /* Brick */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E8DEBBE72D61175E00F9FD7F /* Build configuration list for PBXNativeTarget "Brick" */;
+			buildPhases = (
+				E8DEBBD22D61175E00F9FD7F /* Sources */,
+				E8DEBBD32D61175E00F9FD7F /* Frameworks */,
+				E8DEBBD42D61175E00F9FD7F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				E8DEBBDC2D61175E00F9FD7F /* Brick */,
+			);
+			name = Brick;
+			packageProductDependencies = (
+			);
+			productName = Brick;
+			productReference = E8DEBBD62D61175E00F9FD7F /* Brick.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -146,7 +230,7 @@
 		B41052181EC2BA04006D9146 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0900;
+				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = Apple;
 				TargetAttributes = {
@@ -162,6 +246,9 @@
 								enabled = 0;
 							};
 						};
+					};
+					E8DEBBD52D61175E00F9FD7F = {
+						CreatedOnToolsVersion = 16.0;
 					};
 				};
 			};
@@ -179,6 +266,7 @@
 			projectRoot = "";
 			targets = (
 				B410521F1EC2BA04006D9146 /* NFCTagReader */,
+				E8DEBBD52D61175E00F9FD7F /* Brick */,
 			);
 		};
 /* End PBXProject section */
@@ -191,6 +279,13 @@
 				B410522E1EC2BA04006D9146 /* LaunchScreen.storyboard in Resources */,
 				B47143DA1ECF6EAD0026C5B4 /* Assets.xcassets in Resources */,
 				B41052291EC2BA04006D9146 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8DEBBD42D61175E00F9FD7F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,7 +303,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E8DEBBD22D61175E00F9FD7F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E8DEBBE22D61175E00F9FD7F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E8DEBBD52D61175E00F9FD7F /* Brick */;
+			targetProxy = E8DEBBE12D61175E00F9FD7F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B41052271EC2BA04006D9146 /* Main.storyboard */ = {
@@ -396,6 +506,82 @@
 			};
 			name = Release;
 		};
+		E8DEBBE52D61175E00F9FD7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = Brick/Brick.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9QA9K4TQ94;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Brick/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Brick;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2025 Apple. All rights reserved.";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.NFCTagReader9QA9K4TQ94.Brick";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E8DEBBE62D61175E00F9FD7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = Brick/Brick.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9QA9K4TQ94;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Brick/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Brick;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2025 Apple. All rights reserved.";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.NFCTagReader9QA9K4TQ94.Brick";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -413,6 +599,15 @@
 			buildConfigurations = (
 				B41052331EC2BA04006D9146 /* Debug */,
 				B41052341EC2BA04006D9146 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E8DEBBE72D61175E00F9FD7F /* Build configuration list for PBXNativeTarget "Brick" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8DEBBE52D61175E00F9FD7F /* Debug */,
+				E8DEBBE62D61175E00F9FD7F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
